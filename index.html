@@ -1,75 +1,187 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio</title>
+<title>Ford Pokemon Portfolio</title>
 
 <style>
-body{
+*{
     margin:0;
-    height:100vh;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(to right,#4facfe,#00f2fe);
-    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#ffcb05,#3b4cca);
 }
 
 .card{
+    width:420px;
     background:white;
-    width:350px;
     padding:30px;
-    border-radius:20px;
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
     text-align:center;
+    transition:.3s;
 }
 
-img{
-    width:140px;
-    height:140px;
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.profile{
+    width:150px;
+    height:150px;
     border-radius:50%;
-    border:5px solid #4facfe;
+    border:6px solid #ffcb05;
+    object-fit:cover;
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+}
+
+h1{
+    margin-top:15px;
+    color:#2c3e50;
+}
+
+.subtitle{
+    color:#666;
+    margin-bottom:15px;
+}
+
+.pokemon{
+    background:#fff4cc;
+    color:#d35400;
+    padding:8px;
+    border-radius:15px;
+    margin-bottom:15px;
+    font-weight:bold;
 }
 
 table{
     width:100%;
-    margin-top:20px;
+    border-collapse:collapse;
+    margin-top:10px;
 }
 
 td{
-    padding:8px;
+    padding:10px;
     border-bottom:1px solid #ddd;
+}
+
+td:first-child{
+    font-weight:bold;
+    color:#3b4cca;
+}
+
+.skill{
+    margin-top:15px;
+}
+
+.badge{
+    display:inline-block;
+    background:#4facfe;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    margin:4px;
+    font-size:14px;
 }
 
 .btn{
     display:inline-block;
-    margin-top:15px;
-    padding:10px 20px;
-    background:#4facfe;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#3b4cca;
     color:white;
     text-decoration:none;
-    border-radius:20px;
+    border-radius:25px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ffcb05;
+    color:black;
+}
+
+.footer{
+    margin-top:15px;
+    color:#888;
+    font-size:14px;
 }
 </style>
 </head>
+
 <body>
 
 <div class="card">
-<img src="https://via.placeholder.com/140">
 
-<h1>ชื่อ-นามสกุล</h1>
-<p>Computer Science Student</p>
+<img src="profile.jpg" alt="Profile" class="profile">
+
+<h1>ภูชิต สายวิชัย</h1>
+<p class="subtitle">Computer Science Student 💻</p>
+
+<div class="pokemon">
+⚡ Pokémon Trainer : Ford ⚡
+</div>
 
 <table>
-<tr><td>รหัสนักศึกษา</td><td>69040249145</td></tr>
-<tr><td>ชื่อเล่น</td><td>...</td></tr>
-<tr><td>สาขา</td><td>วิทยาการคอมพิวเตอร์</td></tr>
-<tr><td>จังหวัด</td><td>...</td></tr>
+<tr>
+<td>รหัสนักศึกษา</td>
+<td>69040249145</td>
+</tr>
+
+<tr>
+<td>ชื่อเล่น</td>
+<td>ฟอร์ด</td>
+</tr>
+
+<tr>
+<td>สาขา</td>
+<td>วิทยาการคอมพิวเตอร์</td>
+</tr>
+
+<tr>
+<td>จังหวัด</td>
+<td>อุดรธานี</td>
+</tr>
+
+<tr>
+<td>งานอดิเรก</td>
+<td>เล่นเกม ฟังเพลง เขียนโปรแกรม</td>
+</tr>
+
+<tr>
+<td>Pokémon คู่ใจ</td>
+<td>Pikachu ⚡</td>
+</tr>
+
+<tr>
+<td>ธาตุที่ชอบ</td>
+<td>Electric ⚡</td>
+</tr>
 </table>
 
-<a class="btn" href="https://github.com/fordasd443">GitHub</a>
+<div class="skill">
+<span class="badge">HTML</span>
+<span class="badge">CSS</span>
+<span class="badge">JavaScript</span>
+<span class="badge">C++</span>
+</div>
+
+<a class="btn" href="https://github.com/fordasd443" target="_blank">
+GitHub
+</a>
+
+<div class="footer">
+"Catch your dream like a Pokémon!"
+</div>
+
 </div>
 
 </body>
