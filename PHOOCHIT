@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(to right,#4facfe,#00f2fe);
+    font-family:Arial,sans-serif;
+}
+
+.card{
+    background:white;
+    width:350px;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    text-align:center;
+}
+
+img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    border:5px solid #4facfe;
+}
+
+table{
+    width:100%;
+    margin-top:20px;
+}
+
+td{
+    padding:8px;
+    border-bottom:1px solid #ddd;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#4facfe;
+    color:white;
+    text-decoration:none;
+    border-radius:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+<img src="https://via.placeholder.com/140">
+
+<h1>ชื่อ-นามสกุล</h1>
+<p>Computer Science Student</p>
+
+<table>
+<tr><td>รหัสนักศึกษา</td><td>69040249145</td></tr>
+<tr><td>ชื่อเล่น</td><td>...</td></tr>
+<tr><td>สาขา</td><td>วิทยาการคอมพิวเตอร์</td></tr>
+<tr><td>จังหวัด</td><td>...</td></tr>
+</table>
+
+<a class="btn" href="https://github.com/fordasd443">GitHub</a>
+</div>
+
+</body>
+</html>
