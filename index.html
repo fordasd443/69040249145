@@ -3,154 +3,221 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokédex Portfolio - Ford</title>
 
-<title>Portfolio - Ford</title>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Kanit',sans-serif;
 }
 
 body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#1e3c72,#2a5298,#00c6ff);
-    padding:20px;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:
+linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+padding:20px;
 }
 
 .card{
-    width:420px;
-    background:white;
-    border-radius:30px;
-    overflow:hidden;
-    box-shadow:0 15px 40px rgba(0,0,0,.3);
-    animation:fadeIn 1s ease;
+width:430px;
+background:#dc143c;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 0 40px rgba(0,0,0,.5);
+animation:show 1s ease;
+border:6px solid #b8002b;
 }
 
-.banner{
-    height:180px;
-    background:url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80");
-    background-size:cover;
-    background-position:center;
+.header{
+padding:25px;
+text-align:center;
+background:#ff1f4b;
+position:relative;
+}
+
+.pokeball{
+width:90px;
+height:90px;
+border-radius:50%;
+background:
+linear-gradient(to bottom,
+#ff0000 0%,
+#ff0000 50%,
+#ffffff 50%,
+#ffffff 100%);
+margin:auto;
+border:5px solid #222;
+position:relative;
+}
+
+.pokeball::before{
+content:"";
+position:absolute;
+width:90px;
+height:8px;
+background:#222;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+
+.pokeball::after{
+content:"";
+position:absolute;
+width:22px;
+height:22px;
+background:white;
+border:5px solid #222;
+border-radius:50%;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
 }
 
 .profile{
-    text-align:center;
-    margin-top:-70px;
-    padding:0 25px 30px;
+margin-top:15px;
 }
 
 .profile img{
-    width:140px;
-    height:140px;
-    border-radius:50%;
-    border:6px solid white;
-    object-fit:cover;
-    background:white;
+width:140px;
+height:140px;
+border-radius:50%;
+border:5px solid white;
+object-fit:cover;
+background:white;
 }
 
-.profile h1{
-    margin-top:15px;
-    color:#222;
-    font-size:32px;
+.name{
+font-size:34px;
+font-weight:700;
+color:white;
+margin-top:12px;
 }
 
-.profile h3{
-    color:#666;
-    margin-top:5px;
-    font-weight:normal;
+.role{
+color:#ffeaea;
 }
 
-.type{
-    color:#ff5252;
-    font-weight:bold;
-    margin-top:8px;
+.content{
+background:white;
+padding:25px;
+}
+
+.trainer{
+background:#f4f4f4;
+padding:12px;
+border-radius:15px;
+margin-bottom:20px;
+text-align:center;
+font-weight:600;
 }
 
 .info{
-    margin-top:25px;
-}
-
-.info table{
-    width:100%;
-    border-collapse:collapse;
+width:100%;
+border-collapse:collapse;
 }
 
 .info td{
-    padding:12px;
-    border-bottom:1px solid #eee;
+padding:10px;
+border-bottom:1px solid #ddd;
 }
 
 .info td:first-child{
-    font-weight:bold;
-    color:#444;
+font-weight:600;
+color:#dc143c;
 }
 
 .skill{
-    margin-top:25px;
+margin-top:25px;
 }
 
-.skill h2{
-    margin-bottom:10px;
-    color:#333;
+.skill h3{
+margin-bottom:10px;
+color:#dc143c;
+}
+
+.bar{
+height:12px;
+background:#ddd;
+border-radius:20px;
+overflow:hidden;
+margin-bottom:15px;
+}
+
+.fill{
+height:100%;
+background:linear-gradient(90deg,#ff0000,#ff8c00);
+}
+
+.pokemon{
+margin-top:20px;
+text-align:center;
 }
 
 .badge{
-    display:inline-block;
-    background:#4facfe;
-    color:white;
-    padding:8px 15px;
-    border-radius:20px;
-    margin:4px;
+display:inline-block;
+padding:8px 15px;
+margin:5px;
+border-radius:20px;
+background:#dc143c;
+color:white;
+font-size:14px;
 }
 
 .social{
-    margin-top:25px;
+margin-top:25px;
+text-align:center;
 }
 
 .btn{
-    display:inline-block;
-    margin:5px;
-    padding:12px 22px;
-    border-radius:30px;
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
-    transition:.3s;
+display:inline-block;
+padding:12px 20px;
+margin:5px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:.3s;
 }
 
 .github{
-    background:#24292e;
+background:#24292e;
 }
 
 .facebook{
-    background:#1877f2;
+background:#1877f2;
 }
 
 .btn:hover{
-    transform:scale(1.08);
+transform:translateY(-3px);
 }
 
 .footer{
-    margin-top:20px;
-    color:#888;
-    font-size:14px;
+margin-top:20px;
+text-align:center;
+color:#888;
+font-size:13px;
 }
 
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+@keyframes show{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 </style>
 </head>
@@ -159,25 +226,33 @@ body{
 
 <div class="card">
 
-<div class="banner"></div>
+<div class="header">
+
+<div class="pokeball"></div>
 
 <div class="profile">
 
-<img src="Pokémon Center.jfif">
+<img src="profile.jpg" alt="Ford">
 
-<h1>Thanedphon</h1>
+<div class="name">ฟอร์ด</div>
 
-<h3>Computer Science Student</h3>
+<div class="role">Computer Science Student</div>
 
-<p class="type">⚡ Pokémon Trainer ⚡</p>
+</div>
 
-<div class="info">
+</div>
 
-<table>
+<div class="content">
 
-    <tr>
+<div class="trainer">
+⚡ Pokémon Trainer Lv.20 ⚡
+</div>
+
+<table class="info">
+
+<tr>
 <td>ชื่อ</td>
-<td>นายภูชิต สายวิชัย</td>
+<td>ภูชิต สายวิชัย</td>
 </tr>
     
 <tr>
@@ -202,20 +277,46 @@ body{
 
 <tr>
 <td>ความสนใจ</td>
-<td>Pokémon / Coding / Gaming</td>
+<td>Pokémon • Coding • Gaming</td>
 </tr>
 
 </table>
 
+<div class="skill">
+
+<h3>💻 Skill</h3>
+
+HTML
+<div class="bar">
+<div class="fill" style="width:0%"></div>
 </div>
 
-<div class="skill">
-<h2>Pokémon Team</h2>
+CSS
+<div class="bar">
+<div class="fill" style="width:0%"></div>
+</div>
 
-<span class="badge">⚡ Pikachu</span>
-<span class="badge">🔥 Charizard</span>
-<span class="badge">🌊 Blastoise</span>
-<span class="badge">🌿 Sceptile</span>
+JavaScript
+<div class="bar">
+<div class="fill" style="width:0%"></div>
+</div>
+
+Python
+<div class="bar">
+<div class="fill" style="width:0%"></div>
+</div>
+
+</div>
+
+<div class="pokemon">
+
+<h3>⚡ Partner Pokémon</h3>
+
+<span class="badge">Pikachu</span>
+<span class="badge">Charizard</span>
+<span class="badge">Lucario</span>
+<span class="badge">Greninja</span>
+
 </div>
 
 <div class="social">
@@ -227,7 +328,7 @@ GitHub
 </a>
 
 <a class="btn facebook"
-href="https://facebook.com"
+href="https://www.facebook.com/Phoochit.LCFC"
 target="_blank">
 Facebook
 </a>
@@ -235,7 +336,7 @@ Facebook
 </div>
 
 <div class="footer">
-Portfolio Website by Ford
+Pokédex Portfolio • Ford • 2026
 </div>
 
 </div>
